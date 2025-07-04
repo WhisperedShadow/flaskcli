@@ -1,105 +1,151 @@
-🐍 FlaskCLI – Create & Manage Flask Projects Effortlessly
-=========================================================
+# 🐍 FlaskCLI — Create & Manage Flask Projects Effortlessly
 
 A simple Node.js-based CLI tool that helps you:
 
-✅ Create a new Flask project with templates⚙️ Automatically set up a virtual environment📦 Install your favorite Flask dependencies🚀 Add routes and run the server quickly
+✅ Create a new Flask project with templates  
+⚙️ Automatically set up a virtual environment  
+📦 Install your favorite Flask dependencies  
+🚀 Add routes and run the server quickly
 
-📁 Project Structure on init
-----------------------------
+---
 
-When you run flaskcli init, it creates:
+## 📁 Project Structure on `init`
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   your-project/    ├── app.py    ├── templates/    │   └── index.html (optional)    ├── static/    │   └── (css/js files)    ├── venv/    ├── requirements.txt   `
+When you run `flaskcli init`, it creates:
 
-Make sure you have a template/ folder in your CLI project (outside bin), which will be copied during setup.
+```
+your-project/
+├── app.py
+├── templates/
+│   └── index.html (optional)
+├── static/
+│   └── (css/js files)
+├── venv/
+├── requirements.txt
+```
 
-⚙️ Installation
----------------
+📌 Make sure you have a `template/` folder in your CLI project (outside `bin/`) which will be copied during setup.
 
-To install your CLI locally (during development):
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm install -g .   `
+## ⚙️ Installation
 
-To link it locally (while testing without npm publish):
+### To install your CLI locally (for development):
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm link   `
+```bash
+npm install -g .
+```
 
-Now you can run flaskcli from anywhere in terminal 🧙‍♂️
+### To link it locally (for testing without npm publish):
 
-🚀 Usage
---------
+```bash
+npm link
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli  [options]   `
+Now you can run `flaskcli` from anywhere in your terminal 🧙‍♂️
 
-### 🔧 init - Create a Flask project
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli init   `
+## 🚀 Usage
+
+```bash
+flaskcli <command> [options]
+```
+
+---
+
+### 🔧 `init` — Create a Flask project
+
+```bash
+flaskcli init
+```
 
 📌 This will ask you:
 
-*   Project name
-    
-*   Dependencies to install (like flask-cors, flask-login, etc.)
-    
+- Project name  
+- Dependencies to install (like `flask-cors`, `flask-login`, etc.)
 
-It creates the folder, copies the template, makes a virtual environment, installs dependencies, and creates requirements.txt.
+It creates the folder, copies the template, creates a virtual environment, installs dependencies, and generates `requirements.txt`.
 
-### 📦 install - Add dependencies to an existing project
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli install flask-mail,flask-bcrypt   `
+### 📦 `install` — Add dependencies to an existing project
+
+```bash
+flaskcli install flask-mail,flask-bcrypt
+```
 
 📌 Make sure you run this inside your project folder. It:
 
-*   Installs new dependencies inside venv
-    
-*   Updates requirements.txt
-    
+- Installs new dependencies inside venv  
+- Updates `requirements.txt`
 
-### ➕ route - Add a route dynamically
+---
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli route get /hello   `
+### ➕ `route` — Add a route dynamically
 
-Adds this in app.py:
+```bash
+flaskcli route get /hello
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   @app.route('/hello', methods=['GET'])  def handle_get__hello():      return "Hello from GET /hello"   `
+Adds this to `app.py`:
 
-### ▶️ run - Start Flask server
+```python
+@app.route('/hello', methods=['GET'])
+def handle_get__hello():
+    return "Hello from GET /hello"
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli run   `
+---
 
-Runs python app.py using the created virtual environment.
+### ▶️ `run` — Start Flask server
 
-### ❓ help - Show all commands
+```bash
+flaskcli run
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli help   `
+Runs `python app.py` using the created virtual environment.
 
-✅ Requirements
---------------
+---
 
-*   Python installed and added to PATH
-    
-*   Node.js v14+ for running the CLI
-    
-*   template/ folder with your Flask base files (required by init)
-    
+### ❓ `help` — Show all commands
 
-🛠 Future Ideas
----------------
+```bash
+flaskcli help
+```
 
-*   Auto-create routes.py and blueprints
-    
-*   Auto-create models and forms
-    
-*   Convert to support UNIX/MacOS (using cross-platform paths)
-    
+---
 
-💻 Sample Command Flow
-----------------------
+## ✅ Requirements
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   flaskcli init  # Choose: myapp  # Select: flask-cors, flask-login  cd myapp  flaskcli install flask-mail  flaskcli route post /submit  flaskcli run   `
+- Python installed and added to PATH  
+- Node.js v14+  
+- `template/` folder with your base Flask files
 
-📃 License
-----------
+---
+
+## 🛠 Future Ideas
+
+- Auto-create `routes.py` and blueprints  
+- Auto-generate models and forms  
+- Cross-platform support (UNIX/MacOS)
+
+---
+
+## 💻 Sample Command Flow
+
+```bash
+flaskcli init      # Choose: myapp  
+                   # Select: flask-cors, flask-login  
+cd myapp  
+flaskcli install flask-mail  
+flaskcli route post /submit  
+flaskcli run
+```
+
+---
+
+## 📃 License
 
 MIT License
+

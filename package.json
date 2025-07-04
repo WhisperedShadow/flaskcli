@@ -1,0 +1,23 @@
+{
+  "name": "flaskcli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "flaskcli": "./bin/index.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "keywords": [],
+  "author": "Durai Pon Singh",
+  "license": "ISC",
+  "description": "It's a CLI tool to create Flask projects with a predefined structure and configuration.",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.7.0"
+  }
+}

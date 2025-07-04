@@ -23,8 +23,6 @@ your-project/
 ├── requirements.txt
 ```
 
-📌 Make sure you have a `template/` folder in your CLI project (outside `bin/`) which will be copied during setup.
-
 ---
 
 ## ⚙️ Installation

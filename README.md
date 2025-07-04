@@ -17,9 +17,8 @@ When you run `flaskcli init`, it creates:
 your-project/
 ├── app.py
 ├── templates/
-│   └── index.html (optional)
+│   └── index.html
 ├── static/
-│   └── (css/js files)
 ├── venv/
 ├── requirements.txt
 ```
